@@ -1,0 +1,321 @@
+/*1. estilos generales*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/*2. header*/
+
+header {
+    background-color: #000000;
+    padding: 16px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.header-container h1 a{
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    color: #f1c40f;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    color: #f1c40f;
+    background: rgba(241, 196, 15, 0.1);
+}
+
+nav a.active {
+    color: #e74c3c;
+    border-bottom: 2px solid #e74c3c;
+}
+
+/* 3. main */
+
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 100px auto 40px;
+    padding: 0 24px;
+}
+
+/*4. Section*/
+
+section {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #111;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #e74c3c;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/*5. tarjetas / articulos*/
+
+.articulos {
+    text-align: center;
+}
+
+.articulos-ejemplo, .gallery-grid {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+    margin: 2%;
+}
+
+.articulos-ejemplo:hover, .gallery-grid:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.15);
+}
+
+.articulos-ejemplo img, .gallery-grid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.articulos-ejemplo video, .gallery-grid video {
+    width: 100%;
+    display: block;
+    background: #000;
+}
+
+.articulos-ejemplo h3, .gallery-grid h3 {
+    padding: 16px 20px 8px;
+    color: #222;
+    font-size: 1.3rem;
+}
+
+.articulos-ejemplo p, .gallery-grid p {
+    padding: 0 20px 20px;
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+/*6. Quiénes somos */
+
+.nosotros-present, .ofrece {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nosotros-present > div, .ofrece > div {
+    flex: 1;
+}
+
+.nosotros-present img, .ofrece img {
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.sobre-texto p, .ofrece-text p {
+    margin-bottom: 16px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.mision-vision {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.mision, .vision {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid #e74c3c;
+    flex: 1;
+} 
+
+.mision h3, .vision h3 {
+    color: #111111;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.mision p, .vision p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/*7. formularios*/
+
+.forma-contenedor {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.forma-usuario {
+    margin-bottom: 20px;
+}
+
+.forma-usuario label {
+    display: block;
+    margin-bottom: 6px;
+    color: #111111;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.forma-usuario input,
+.forma-usuario select,
+.forma-usuario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.forma-usuario input:focus,
+.forma-usuario select:focus,
+.forma-usuario textarea:focus {
+    border-color: #e74c3c;
+    outline: none;
+}
+
+.forma-usuario textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.boton {
+    background-color: #e74c3c;
+    color: white;
+    padding:  12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.boton:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.15);
+}
+
+/*8. footer*/
+
+footer {
+    background-color: #000;
+    color: #cccccc;
+    text-align: center;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 4px 0;
+    font-size: 0.9rem;
+}
+
+/* 9.Responsividad*/
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main {
+        margin-top: 140px;
+    }
+
+    section {
+        padding: 24px;
+    }
+
+    .articulos-ejemplo, .gallery-grid {
+        width: 98%;
+        margin: 10px 1%;
+    }
+
+    .nosotros-present, .ofrece {
+        flex-direction: column;
+    }
+
+    .nosotros-present img, .ofrece img {
+        width: 100%;
+    }
+
+    .mision-vision{
+        flex-direction: column;
+    }
+}
