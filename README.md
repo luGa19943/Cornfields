@@ -2,6 +2,8 @@
 
 A responsive agricultural information website developed with HTML5 and CSS3. This project was created to practice responsive web design, content organization, multimedia integration, and user-friendly interface development.
 
+🌐 **Live Demo:** https://luga19943.github.io/Cornfields/
+
 ---
 
 # 📖 About the Project
